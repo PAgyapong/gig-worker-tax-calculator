@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --color-glass-light: rgba(255, 255, 255, 0.7);
+  --color-glass-dark: rgba(0, 0, 0, 0.4);
+  
+  --color-primary: #6366f1; /* Indigo 500 */
+  --color-secondary: #ec4899; /* Pink 500 */
+}
+
+body {
+  @apply bg-slate-50 text-slate-900;
+  min-height: 100vh;
+  background-image: radial-gradient(circle at top right, #e0e7ff, transparent 40%),
+                    radial-gradient(circle at bottom left, #fce7f3, transparent 40%);
+  background-attachment: fixed;
+}
+
+.glass-card {
+  @apply bg-white/60 backdrop-blur-xl border border-white/40 shadow-xl rounded-2xl;
+}
+
+.glass-input {
+  @apply bg-white/50 border border-white/50 rounded-xl px-4 py-3 min-h-[48px] focus:outline-none focus:ring-2 focus:ring-primary/50 backdrop-blur-sm transition-all text-base;
+}
+
+.glass-button {
+  @apply bg-primary/90 hover:bg-primary text-white font-medium py-3 px-6 rounded-xl min-h-[48px] shadow-lg hover:shadow-xl transition-all active:scale-95 flex items-center justify-center;
+}
